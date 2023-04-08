@@ -1,0 +1,2 @@
+1. Get a datastore so I can add products and then get products.
+2. Add tests for the ProductDataStore and also the ProductController.
