@@ -8,6 +8,7 @@ public class Product {
 	private String id;
 	private String desc;
 
+	public Product() {}
 	public Product(String id, String desc) {
 		this.id = id;
 		this.desc = desc;
