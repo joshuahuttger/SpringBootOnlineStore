@@ -1,6 +1,7 @@
 #adding current user to docker group
 sudo apt update
 sudo apt upgrade
+sudo apt install openjdk-17-jdk openjdk-17-jre
 sudo apt install docker.io
 if ! [ $(getent group docker) ]; then
    sudo groupadd docker

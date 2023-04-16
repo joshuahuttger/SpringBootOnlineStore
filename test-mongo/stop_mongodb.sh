@@ -1,2 +1,2 @@
-docker stop test-mongo
-docker rm test-mongo
+sudo docker stop test-mongo
+sudo docker rm test-mongo

@@ -1,5 +1,7 @@
 export WORKSPACE="~/Documents/spring-workspace"
 export STORE_PROJECT_HOME="$WORKSPACE/SpringBootOnlineStore"
-alias prod="cd $STORE_PROJECT_HOME"
+alias goprod="cd $STORE_PROJECT_HOME"
+alias goprodservice="cd $STORE_PROJECT_HOME/ProductService"
 alias startmongo="stopmongo;sh $STORE_PROJECT_HOME/test-mongo/start_mongodb.sh"
 alias stopmongo="sh $STORE_PROJECT_HOME/test-mongo/stop_mongodb.sh"
+alias prodtest="olddir=$(pwd);goprodservice;startmongo;./gradlew test;stopmongo;cd $olddir"

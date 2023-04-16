@@ -11,6 +11,7 @@ import org.springframework.boot.test.web.client.TestRestTemplate;
 
 import com.huttger.joshua.store.data.Product;
 
+
 @SpringBootTest(webEnvironment=WebEnvironment.RANDOM_PORT)
 class ProductControllerTest {
 	
@@ -22,7 +23,7 @@ class ProductControllerTest {
 
 	@Test
 	void testPostAndGet() {
-		Product testProduct = new Product("123", "myDesc");
+		Product testProduct = new Product("12344", "myDesc");
 		assertThat(postProduct(testProduct)).isEqualTo(testProduct);
 		assertThat(getProduct(testProduct.getId())).isEqualTo(testProduct);
 	}
