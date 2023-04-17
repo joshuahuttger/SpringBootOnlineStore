@@ -6,4 +6,4 @@ Creation-Date: 2023-04-08T17:53:08-07:00
 1. Create Auto Increment id for product
 2. Throwing the right exception within the data methods
 3. Throw exception if the product already exists.
-4. Figure out autoformatter.
+4. Create the react hello world
