@@ -37,5 +37,4 @@ class ProductControllerTest {
 		String url = StoreConfig.getProductHost() + ":" + port + "/product?id="+id;
 		return this.restTemplate.getForObject(url, Product.class);
 	}
-
 }
