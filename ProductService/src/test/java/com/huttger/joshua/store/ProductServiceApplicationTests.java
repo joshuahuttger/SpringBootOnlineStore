@@ -11,7 +11,7 @@ class ProductServiceApplicationTests {
 
 	@Autowired
 	private ProductController productController;
-	
+
 	@Test
 	void contextLoads() {
 		assertThat(productController).isNotNull();

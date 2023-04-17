@@ -10,13 +10,13 @@ import org.springframework.boot.test.web.client.TestRestTemplate;
 
 import com.huttger.joshua.store.customer.data.Customer;
 
-@SpringBootTest(webEnvironment=WebEnvironment.RANDOM_PORT)
+@SpringBootTest(webEnvironment = WebEnvironment.RANDOM_PORT)
 class CustomerControllerTest {
-	
+
 	@Autowired
 	private TestRestTemplate restTemplate;
-	
-	@Value(value="${local.server.port}")
+
+	@Value(value = "${local.server.port}")
 	private int port;
 
 	@Test
@@ -25,14 +25,14 @@ class CustomerControllerTest {
 		assertThat(postCustomer(testCustomer)).isEqualTo(testCustomer);
 		assertThat(getCustomer(testCustomer.getId())).isEqualTo(testCustomer);
 	}
-	
+
 	private Customer postCustomer(Customer customer) {
 		String url = StoreConfig.getCustomerHost() + ":" + port + "/customer";
 		return this.restTemplate.postForObject(url, customer, Customer.class);
 	}
-	
+
 	private Customer getCustomer(int id) {
-		String url = StoreConfig.getCustomerHost() + ":" + port + "/customer?id="+id;
+		String url = StoreConfig.getCustomerHost() + ":" + port + "/customer?id=" + id;
 		return this.restTemplate.getForObject(url, Customer.class);
 	}
 }
