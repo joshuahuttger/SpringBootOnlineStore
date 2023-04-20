@@ -13,6 +13,14 @@ class NewCustomerForm extends React.Component {
 	handleSubmit(event) {
 		alert('Name was submitted: ' + this.state.name);
 		event.preventDefault();
+		fetch('http://localhost:8080/customer', {
+			method: 'POST',
+			body: { name: "Chicken Tenders", id: "545454" }
+		})
+			.then(response => response.text()) // Read response as text
+			.then(data => {
+				console.log("data returned = "+data);
+			})
 	}
 
 	render() {
