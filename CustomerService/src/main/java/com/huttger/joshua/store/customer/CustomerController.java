@@ -1,5 +1,7 @@
 package com.huttger.joshua.store.customer;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -19,6 +21,11 @@ public class CustomerController {
 	@GetMapping("/customer")
 	public Customer getCustomer(@RequestParam(value = "id") int id) {
 		return customerRepository.findById(id).orElseThrow();
+	}
+	
+	@GetMapping("/customer/all")
+	public List<Customer> getCustomers() {
+		return customerRepository.findAll();
 	}
 
 	@CrossOrigin(origins = "http://localhost:3000")
