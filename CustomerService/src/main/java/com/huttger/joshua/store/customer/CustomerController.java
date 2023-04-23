@@ -20,6 +20,7 @@ public class CustomerController {
 	public Customer getCustomer(@RequestParam(value = "id") int id) {
 		return customerRepository.findById(id).orElseThrow();
 	}
+
 	@CrossOrigin(origins = "http://localhost:3000")
 	@PostMapping("/customer")
 	public Customer postCustomer(@RequestBody Customer customer) {

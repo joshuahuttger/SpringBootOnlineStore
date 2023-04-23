@@ -15,7 +15,7 @@ import com.huttger.joshua.store.customer.data.CustomerDataStore;
 public class CustomerScheduledTasks {
 
 	private static final Logger log = LoggerFactory.getLogger(CustomerScheduledTasks.class);
-	
+
 	@Autowired
 	private CustomerDataStore customerRepository;
 
